@@ -18,6 +18,17 @@
 </head>
 
 <body>
+    <!-- modal -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <a href="#" class="modal-close-btn" data-modal-close>
+                <svg class="modal-close-icon">
+                    <use href="./images/icons.svg#close"></use>
+                </svg>
+            </a>
+
+        </div>
+    </div>
     <!-- Header -->
     <header>
         <div class="container header">
@@ -57,7 +68,7 @@
         <section class="hero">
             <div class="hero-container">
                 <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-                <button class="hero__btn" type="button">Замовити послугу</button>
+                <button class="hero__btn" type="button" data-modal-open>Замовити послугу</button>
             </div>
         </section>
         <section class="features section">
@@ -119,18 +130,26 @@
                 <h2 class="we-working__title">Чим ми займаємося</h2>
                 <ul class="we-working__list">
                     <li class="we-working__item">
-                        <img class="we-working__item-img" src="images/img_1.jpg"
-                            alt="Працюючий програміст, його робоче місце.">
-                    </li>
-                    <li class="we-working__item">
-                        <img class="we-working__item-img" src="images/img_2.jpg"
-                            alt="Дизайнер розробляє інтерфейс застосунка для мобільного телефона.">
+                        <div class="we-working-thumb">
+                            <img class="we-working__item-img" src="images/img_1.jpg"
+                                alt="Працюючий програміст, його робоче місце.">
+                            <h3 class="we-working-owerlay-title">Десктопні додатки</h3>
+                        </div>
 
                     </li>
                     <li class="we-working__item">
-                        <img class="we-working__item-img" src="images/img_3.jpg"
-                            alt="Веб-дизайнер з планшетом на якому зображено вибір кольору.">
-
+                        <div class="we-working-thumb">
+                            <img class="we-working__item-img" src="images/img_2.jpg"
+                                alt="Дизайнер розробляє інтерфейс застосунка для мобільного телефона.">
+                            <h3 class="we-working-owerlay-title">Мобільні додатки</h3>
+                        </div>
+                    </li>
+                    <li class="we-working__item">
+                        <div class="we-working-thumb">
+                            <img class="we-working__item-img" src="images/img_3.jpg"
+                                alt="Веб-дизайнер з планшетом на якому зображено вибір кольору.">
+                            <h3 class="we-working-owerlay-title">Дизайнерські рішення</h3>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -395,6 +414,9 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
